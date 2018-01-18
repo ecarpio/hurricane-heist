@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Starter Template for Bootstrap</title>
+    <title>Hurricane Heist</title>
 
     <!-- Google Font Load -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900" rel="stylesheet">
@@ -19,7 +19,7 @@
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+  
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -30,108 +30,55 @@
 
   <body>
 
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html"><img src="assets/mj-media-logo.jpg" /></a>
+    <video autoplay="" loop="" muted="" playsinline="" id="video-background" style="opacity: 1;">
+      <source id="video-background-source" src="http://hostilesmovie.com/img/bg-loop.mp4" type="video/mp4">
+    </video>
+
+    
+    <header>
+      <div class="container-fluid">
+        <div class="social row">
+          <div class="col col-xs-12 text-right">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-youtube-play"></i>
+            <i class="fa fa-instagram"></i>
+          </div>
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="products.html">Products</a></li>
-            <li><a href="info.html">Info</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
       </div>
+      
+    </header>
+
+    <nav class="navbar">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <i class="fa fa-bars"></i>
+          </button>
+          <a href="#"><img src="assets/hh-logo.png" class="main-logo intro-animate start"/></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+          <ul class="nav navbar-nav navbar-right main-nav intro-animate start">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Synopsis</a></li>
+            <li><a href="#">Cast</a></li>
+            <li><a href="#">Gallery</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
     </nav>
 
-    <div class="hero-banner">
-      <div class="container">
-        <div class="row">
-          <div class="col col-md-6 col-md-push-6">
-            <div class="create-account">
-              <h3>Create a New Account</h3>
 
-              <input type="text" placeholder="E-mail" />
-              <input type="password" placeholder="Password" />
-              <input type="password" placeholder="Confirm Pasword" />
-              <button class="btn btn-primary">Sign Up</button>
-
-              <p>Already Have an Account? <a href="login.html">Log in here</a>.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="media-trio">
-      <div class="container">
-        <div class="row">
-          <div class="col col-md-4">
-
-            <div class="icon-container">
-              <img src="assets/media_icon-04.svg" />
-            </div>
-            <div class="media-label">
-              Network
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio diam, varius convallis ultricies eget, ultrices ut diam. Phasellus pharetra rutrum semper.
-            </p>
-
-          </div>
-
-          <div class="col col-md-4">
-            
-            <div class="icon-container">
-              <img src="assets/media_icon-03.svg" />
-            </div>
-            <div class="media-label">
-              Location-Based
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio diam, varius convallis ultricies eget, ultrices ut diam. Phasellus pharetra rutrum semper.
-            </p>
-
-          </div>
-
-          <div class="col col-md-4">
-            
-            <div class="icon-container">
-              <img src="assets/media_icon-02.svg" />
-            </div>
-            <div class="media-label">
-              Screens
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio diam, varius convallis ultricies eget, ultrices ut diam. Phasellus pharetra rutrum semper.
-            </p>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="newsletter">
-      <div class="container">
-        <div class="row">
-          <div class="col col-xs-12">
-            <h3>Get some dope in your inbox. Sign up for our Newsletter!</h3>
-            <input type="text" placeholder="Enter Email" />
-            <button class="btn btn-secondary">Submit</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    
+    
+    
 
     <footer>
-     <img src="assets/mj-media-logo.jpg" /> &copy; 2017 MERRY JANE. All Rights Reserved
+      hello
     </footer>
 
     <!-- Bootstrap core JavaScript
