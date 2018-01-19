@@ -17,6 +17,22 @@
         transition-timing-function: cubic-bezier(1.000, 0.080, 0.475, 1.295); /* custom */
 }
 
+
+// Typography
+
+.gothic {
+	font-family: 'Libre Franklin', sans-serif;
+}
+
+a {
+	color:$red;
+
+		&:hover {
+			color:#fff;
+		}
+}
+
+
 // Site Structure
 
 html, body {
@@ -26,10 +42,40 @@ html, body {
 	position:relative;
 }
 
+.header-cover {
+	position:fixed;
+	top:-180px;
+	width:100%;
+	height:500px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+31,000000+44&1+23,0+69 */
+	background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0.85) 23%, rgba(0,0,0,0.83) 31%, rgba(0,0,0,0.55) 44%, rgba(0,0,0,0) 69%); /* FF3.6-15 */
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0.85) 23%,rgba(0,0,0,0.83) 31%,rgba(0,0,0,0.55) 44%,rgba(0,0,0,0) 69%); /* Chrome10-25,Safari5.1-6 */
+	background: radial-gradient(ellipse at center, rgba(0,0,0,0.85) 23%,rgba(0,0,0,0.83) 31%,rgba(0,0,0,0.55) 44%,rgba(0,0,0,0) 69%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+		&:before {
+			content:'';
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+31,000000+44&1+23,0+69 */
+			background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 23%, rgba(0,0,0,0.83) 31%, rgba(0,0,0,0.55) 44%, rgba(0,0,0,0) 69%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 23%,rgba(0,0,0,0.83) 31%,rgba(0,0,0,0.55) 44%,rgba(0,0,0,0) 69%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom, rgba(0,0,0,0.65) 23%,rgba(0,0,0,0.83) 31%,rgba(0,0,0,0.55) 44%,rgba(0,0,0,0) 69%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+			height:350px;
+			position:fixed;
+			top:0px;
+			width:100%;
+			display:block;
+		}
+
+}
+
 header {
+	background-color:rgba(0,0,0,1);
+	position:relative;
 	border-bottom:1px solid #333;
-	padding:10px 0px;
+	padding:12px 0px 10px 0px;
 		.social {
+			padding-right:50px;
 			.fa {
 				margin-left:15px;
 				color:$red;
@@ -65,8 +111,11 @@ header {
 }
 
 .main-nav {
+	padding-right:50px;
+	margin-top:30px;
 	right:20px;
 	position:absolute;
+	@extend .gothic;
 	@extend .ease-pop;
 
 	&.start {
@@ -82,6 +131,8 @@ header {
 			text-transform:uppercase;
 			font-size:20px;
 			font-weight:900;
+			text-shadow:-3px 3px 0px #000;
+
 
 				&:hover {
 					background:none;
@@ -89,6 +140,16 @@ header {
 				}
 		}
 		
+		.get-tickets {
+			margin-top:-20px;
+			@extend .ease-pop;
+
+				&:hover {
+					margin-top:-25px;
+					@extend .ease-pop;
+				}
+		}
+
 	}
 
 	
@@ -102,20 +163,13 @@ header {
 	position: fixed;
 	top: 0;
 	left: 0;
-	-webkit-transition: -webkit-transform 0.45455s linear;
-	transition: -webkit-transform 0.45455s linear;
-	-o-transition: transform 0.45455s linear;
-	transition: transform 0.45455s linear;
-	transition: transform 0.45455s linear, -webkit-transform 0.45455s linear;
-	-webkit-transform: translateX(100%);
-	-ms-transform: translateX(100%);
-	transform: translateX(100%);
 }
 
 
 footer { 
+	background-color:#000;
 	border-top:1px solid #333;
-    position: absolute; 
-    left: 0 ; right: 0; bottom: 0; 
-    height:40px;
+  position: absolute; 
+  left: 0 ; right: 0; bottom: 0; 
+  height:40px;
 }
