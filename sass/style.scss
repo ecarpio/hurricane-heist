@@ -1,6 +1,7 @@
 @import "bootstrap";
 @import "font-awesome";
 @import "colors";
+@import "responsive";
 
 // Easing
 .ease-pop {
@@ -61,7 +62,7 @@ html, body {
 
 .header-cover {
 	position:fixed;
-	top:-180px;
+	top:-300px;
 	width:100%;
 	height:500px;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+31,000000+44&1+23,0+69 */
@@ -144,7 +145,7 @@ header {
 
 	li {
 		a {
-			color:#fff;
+			color:#e8e7e7;
 			text-transform:uppercase;
 			font-size:20px;
 			font-weight:900;
@@ -228,4 +229,42 @@ footer {
   		color:$gray;
   		margin:0px 10px;
   	}
+}
+
+
+@media (max-width: 991px) {
+  .navbar-header {
+      float: none;
+  }
+  .navbar-left,.navbar-right {
+      float: none !important;
+  }
+  .navbar-toggle {
+      display: block;
+  }
+  .navbar-collapse {
+      border-top: 1px solid transparent;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-fixed-top {
+      top: 0;
+      border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+      display: none!important;
+  }
+  .navbar-nav {
+      float: none!important;
+      margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+      float: none;
+  }
+  .navbar-nav>li>a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  .collapse.in{
+      display:block !important;
+  }
 }
