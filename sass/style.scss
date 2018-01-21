@@ -1,7 +1,11 @@
-@import "bootstrap";
+@import "bootstrap.css";
 @import "font-awesome";
 @import "colors";
 @import "responsive";
+
+.navbar-collapse.collapse.in {
+  display: block!important;
+}
 
 // Easing
 .ease-pop {
@@ -45,6 +49,7 @@ a {
 
 		&:hover {
 			color:#fff;
+			text-decoration: none;
 		}
 }
 
@@ -60,6 +65,8 @@ html, body {
 	@extend .roboto;
 }
 
+
+// Header
 .header-cover {
 	position:fixed;
 	top:-300px;
@@ -80,11 +87,10 @@ html, body {
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 			height:350px;
 			position:fixed;
-			top:0px;
+			top:-60px;
 			width:100%;
 			display:block;
 		}
-
 }
 
 header {
@@ -92,6 +98,7 @@ header {
 	position:relative;
 	border-bottom:1px solid #333;
 	padding:12px 0px 10px 0px;
+	z-index: 20;
 		.social {
 			padding-right:50px;
 			.fa {
@@ -104,6 +111,7 @@ header {
 
 .navbar-header {
 	overflow:hidden;
+	z-index: 20;
 }
 
 .main-logo {
@@ -114,6 +122,7 @@ header {
 	overflow:hidden;
 	left:0px;
 	top:0px;
+	z-index: 20;
 	@extend .ease-pop;
 
 		&.start {
@@ -128,9 +137,11 @@ header {
 		}
 }
 
+// Main NAvigation
 .main-nav {
+	z-index: 20;
 	padding-right:50px;
-	margin-top:30px;
+	top:30px;
 	right:20px;
 	position:absolute;
 	@extend .gothic;
@@ -138,21 +149,25 @@ header {
 
 	&.start {
 		position:absolute;
-		right:-500px;
+		right:-1000px;
 		@extend .ease-pop;
 	}
 
 
 	li {
+
+		margin-left:40px;
+
 		a {
 			color:#e8e7e7;
 			text-transform:uppercase;
-			font-size:20px;
+			font-size:18px;
 			font-weight:900;
 			text-shadow:-3px 3px 0px #000;
+			@extend .ease-quick;
 
 
-				&:hover {
+				&:hover, &.active {
 					background:none;
 					color:$red;
 					@extend .ease-quick;
@@ -174,7 +189,8 @@ header {
 	
 }
 
-#video-background {
+// Home Page
+#home-background {
 	-o-object-fit: cover;
 	object-fit: cover;
 	width: 100vw;
@@ -184,6 +200,22 @@ header {
 	left: 0;
 }
 
+// Footer
+.footer-overlay {
+	position:fixed;
+	width:100%;
+	bottom:0px;
+	z-index: 100;
+	height:200px;
+	background-color:#000;
+	border-top:1px solid #333;
+	@extend .ease-pop;
+
+		&.hide {
+			bottom:-800px;
+			@extend .ease-pop;
+		}
+}
 
 footer { 
 	text-transform: uppercase;
@@ -194,9 +226,10 @@ footer {
   left: 0 ; right: 0; bottom: 0; 
   height:100px;
   padding:28px 20px;
+  z-index: 20;
 
   	.watch-trailer {
-  		margin-top:-25px;
+  		margin-top:-32px;
   		margin-left:20px;
   		position:absolute;
   		left:0px;
@@ -231,40 +264,30 @@ footer {
   	}
 }
 
+//Carousel
+.carousel {
+	height:100%;
 
-@media (max-width: 991px) {
-  .navbar-header {
-      float: none;
-  }
-  .navbar-left,.navbar-right {
-      float: none !important;
-  }
-  .navbar-toggle {
-      display: block;
-  }
-  .navbar-collapse {
-      border-top: 1px solid transparent;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-  }
-  .navbar-fixed-top {
-      top: 0;
-      border-width: 0 0 1px;
-  }
-  .navbar-collapse.collapse {
-      display: none!important;
-  }
-  .navbar-nav {
-      float: none!important;
-      margin-top: 7.5px;
-  }
-  .navbar-nav>li {
-      float: none;
-  }
-  .navbar-nav>li>a {
-      padding-top: 10px;
-      padding-bottom: 10px;
-  }
-  .collapse.in{
-      display:block !important;
-  }
+		.carousel-inner {
+			height:100%;
+		}
 }
+
+//Sub Pages
+
+.sub-page {
+	position:fixed;
+	top:2000px;
+	left:0px;
+	right:0px;
+	bottom:-2000px;
+	background:#000;
+	@extend .ease-pop;
+
+		&.active {
+			top:0px;
+			bottom:0px;
+			@extend .ease-pop;
+		}
+}
+

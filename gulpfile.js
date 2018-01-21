@@ -17,6 +17,14 @@ gulp.task('bower', function() {
      .pipe(gulp.dest(config.bowerDir))
 });
 
+gulp.task('sass', function() {
+    return gulp.src(['node_modules/bootstrap/scss/bootstrap.scss', 'src/scss/*.scss'])
+        .pipe(sass())
+        .pipe(gulp.dest("./css"))
+        .pipe(browserSync.stream());
+});
+
+
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('css', function() {
@@ -24,7 +32,6 @@ gulp.task('css', function() {
         .pipe(sass({
             outputStyle: 'compressed',
         	includePaths: [
-               config.bowerDir + '/bootstrap-sass/assets/stylesheets',
                config.bowerDir + '/font-awesome/scss',	
            ], errLogToConsole: true 
         }))
@@ -36,8 +43,8 @@ gulp.task('css', function() {
 
 gulp.task('compress', function() {
     return gulp.src([
-            config.bowerDir + '/jquery/dist/jquery.js',
-            config.bowerDir + '/bootstrap-sass/assets/javascripts/bootstrap.js',
+            './node_modules/jquery/dist/jquery.min.js',
+            './node_modules/bootstrap/dist/js/bootstrap.min.js',
         ])
         .pipe(uglify())
         .pipe(concat('main.js'))
@@ -53,12 +60,11 @@ gulp.task('icons', function() {
 });
 
 // Static server
-gulp.task('serve',['css', 'bower', 'icons', 'compress'], function() {
+gulp.task('serve',['sass', 'css', 'bower', 'icons', 'compress'], function() {
 
     browserSync.init({
         server: "./"
     });
-
     gulp.watch("./sass/*.scss", ['css']);
     gulp.watch("./*.html").on('change', browserSync.reload);
 });
