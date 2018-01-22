@@ -3,9 +3,6 @@
 @import "colors";
 @import "responsive";
 
-.navbar-collapse.collapse.in {
-  display: block!important;
-}
 
 // Easing
 .ease-pop {
@@ -65,6 +62,11 @@ html, body {
 	@extend .roboto;
 }
 
+body {
+	-webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+}
 
 // Header
 .header-cover {
@@ -122,7 +124,7 @@ header {
 	overflow:hidden;
 	left:0px;
 	top:0px;
-	z-index: 20;
+	z-index: 40;
 	@extend .ease-pop;
 
 		&.start {
@@ -137,7 +139,16 @@ header {
 		}
 }
 
+
+
+
+
 // Main NAvigation
+.navbar-toggler {
+	z-index: 50;
+	color:#fff;
+}
+
 .main-nav {
 	z-index: 20;
 	padding-right:50px;
@@ -185,12 +196,16 @@ header {
 		}
 
 	}
+}
 
-	
+.navbar-collapse {
+	&.show {
+		background:rgba(0,0,0,0.8);
+	}
 }
 
 // Home Page
-#home-background {
+.video-bg {
 	-o-object-fit: cover;
 	object-fit: cover;
 	width: 100vw;
@@ -198,6 +213,14 @@ header {
 	position: fixed;
 	top: 0;
 	left: 0;
+  transform: translateX(0);
+}
+
+#movieTrailer {
+	position: relative;
+	-o-object-fit: cover;
+	object-fit: cover;
+	width: 100%;
 }
 
 // Footer
@@ -264,12 +287,58 @@ footer {
   	}
 }
 
-//Carousel
+// Carousel
 .carousel {
 	height:100%;
 
 		.carousel-inner {
 			height:100%;
+		}
+}
+
+// Modal
+.modal {
+	background:#000;
+
+		.modal-dialog {
+			margin:0px;
+			max-width: 100%;
+			width: 100vw;
+			min-height: 100vh;
+				.modal-content {
+
+					.trailer-logo {
+						margin-top:-30px;
+						width:100%;
+						max-width:400px;
+						position:absolute;
+						overflow:hidden;
+						left:0px;
+						top:0px;
+						z-index: 40;
+						@extend .ease-pop;
+
+							&.start {
+								right:-500px;
+								top:-500px;
+								@extend .ease-pop;
+							}
+
+							&.end {
+								@extend .ease-quick;
+								transform: rotate(-5deg);
+							}
+					}	
+
+
+					.modal-body {
+						padding:0px 0px;
+						background: #000;
+						border-radius: 0px;
+						height:80%;
+					}
+				}	
+				
 		}
 }
 

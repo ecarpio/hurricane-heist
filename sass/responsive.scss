@@ -7,5 +7,42 @@
 		max-width:400px !important;
 	}
 
+}
 
+
+@media (max-width:991px) {
+	.navbar-collapse{
+		.main-nav {
+			opacity:0;
+			width:100%;
+			padding:140px 0px;
+			top:-8px;
+			position:fixed;
+			right:0px;
+			bottom:0px;
+			height:100%;
+			background:rgba(0,0,0,0.8);
+
+			li {
+				width:100%;
+				text-align: center;
+				margin:0px;
+				margin-bottom:0px;
+
+					a {
+						font-size:28px !important;
+					}
+
+					&:last-child {
+						margin-top:40px;
+					}
+			}
+		}
+	}
+
+	&.show {
+		.main-nav {
+			opacity:1;
+		}
+	}
 }

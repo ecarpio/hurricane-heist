@@ -32,7 +32,7 @@
 
   <body>
 
-    <video loop muted playsinline id="home-background" style="opacity: 1;">
+    <video loop muted playsinline id="home-background" class="video-bg" style="opacity: 1;">
       <source id="video-background-source" src="http://hostilesmovie.com/img/bg-loop.mp4" type="video/mp4">
     </video>
 
@@ -69,7 +69,7 @@
       </div>
     </nav>
 
-    <div class="footer-overlay"></div>
+    <div class="footer-overlay hide"></div>
     <footer>
       <div class="container-fluid">
 
@@ -103,7 +103,7 @@
     </div>
 
     <div class="sub-page cast">
-      <div id="castCarousel" class="carousel slide" data-ride="carousel">
+      <div id="castCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <video autoplay="true" loop="true" muted="" playsinline="" id="cast1" style="opacity: 1;">
@@ -132,6 +132,21 @@
       </div>
     </div>
 
+
+
+    <div class="modal fade" id="movieTrailerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <img src="assets/hh-logo.png" class="trailer-logo intro-animate start"/>
+          <div class="modal-body">
+            <video autoplay controls="true" muted playsinline id="movieTrailer" style="opacity: 1;">
+              <source id="video-background-source" src="http://hostilesmovie.com/img/bg-loop.mp4" type="video/mp4">
+            </video>
+          </div>
+        
+        </div>
+      </div>
+    </div>
 
 
     <!-- Bootstrap core JavaScript
