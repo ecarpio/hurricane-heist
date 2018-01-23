@@ -31,27 +31,30 @@
   </head>
 
   <body>
-
+    <!-- Begin Main Home Background Video -->
     <video loop muted playsinline id="home-background" class="video-bg" style="opacity: 1;">
-      <source id="video-background-source" src="http://hostilesmovie.com/img/bg-loop.mp4" type="video/mp4">
+      <source id="video-background-source" src="assets/hh-main-bg.mp4" type="video/mp4">
     </video>
+    <!-- End Main Home Background Video -->
 
+    <!-- Begin Header -->
     <div class="header-cover"></div>
     
     <header>
       <div class="container-fluid">
         <div class="social row">
           <div class="col col-xs-12 text-right">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-youtube-play"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="http://www.facebook.com/hurricaneheist" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/HurricaneHeist" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com/hurricaneheistmovie/" target="_blank"><i class="fa fa-instagram"></i></a>
           </div>
         </div>
       </div>
       
     </header>
+    <!-- End Header -->
 
+    <!-- Begin Main Nav Bar -->
     <nav class="navbar navbar-expand-lg">
       <a href="#"><img src="assets/hh-logo.png" class="main-logo intro-animate start"/></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,18 +71,22 @@
         </ul>
       </div>
     </nav>
+    <!-- End Main Nav Bar -->
 
-    <div class="footer-overlay hide"></div>
+    <div class="footer-overlay hide text-center">
+      <img src="assets/billing-block.png" class="billing-block" />
+    </div>
+
+    <!-- Begin Footer -->
     <footer>
       <div class="container-fluid">
 
         <div class="row watch-trailer">
           <div class="col col-12">
-            <img src="assets/watch-trailer.png" class="watch-trailer intro-animate start" />
+            <img src="assets/watch-trailer.png" class="watch-trailer intro-animate start" id="watchTrailer" />
             <img src="assets/play-icon.png" class="play-icon intro-animate start" />
           </div>
         </div>
-
 
         <div class="row">
           <div class="col-12 text-right bottom-links">
@@ -95,7 +102,7 @@
         </div>
       </div>
     </footer>
-
+    <!-- End Footer -->
 
     <!-- Synopsis Section -->
 
@@ -133,21 +140,28 @@
     </div>
 
 
-
+    <!-- Begin Trailer Modal -->
     <div class="modal fade" id="movieTrailerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true"><i class="fa fa-times"></i></span>
+      </button>
+
       <div class="modal-dialog modal-dialog-centered" role="document">
+         
         <div class="modal-content">
-          <img src="assets/hh-logo.png" class="trailer-logo intro-animate start"/>
+
+          <img src="assets/hh-logo.png" class="trailer-logo start"/>
           <div class="modal-body">
-            <video autoplay controls="true" muted playsinline id="movieTrailer" style="opacity: 1;">
-              <source id="video-background-source" src="http://hostilesmovie.com/img/bg-loop.mp4" type="video/mp4">
+            <video controls="true" playsinline id="movieTrailer" style="opacity: 1;">
+              <source id="video-background-source" src="assets/hh1.mp4" type="video/mp4">
             </video>
           </div>
         
         </div>
       </div>
     </div>
-
+    <!-- End Trailer Modal -->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

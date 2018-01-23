@@ -45,4 +45,22 @@
 			opacity:1;
 		}
 	}
+
+	.watch-trailer {
+		width:100%;
+		max-width:200px !important;
+	}
+
+	.play-icon {
+		max-width:40px;
+		bottom:-20px !important;
+		left:220px !important;
+	}
+}
+
+@media (max-width:640px) { 
+	.main-logo {
+		width:90% !important;
+		margin-top:-20px !important;
+	}
 }
