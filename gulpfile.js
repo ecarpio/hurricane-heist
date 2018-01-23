@@ -45,6 +45,7 @@ gulp.task('compress', function() {
     return gulp.src([
             './node_modules/jquery/dist/jquery.min.js',
             './node_modules/bootstrap/dist/js/bootstrap.min.js',
+            './node_modules/jquery.html5loader/src/jquery.html5Loader.min.js',
         ])
         .pipe(uglify())
         .pipe(concat('main.js'))

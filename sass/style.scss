@@ -1,6 +1,6 @@
 @import "bootstrap.css";
 @import "font-awesome";
-@import "colors";
+@import "colors.scss";
 @import "responsive";
 
 
@@ -213,8 +213,20 @@ header {
 	position: fixed;
 	top: 0;
 	left: 0;
-  transform: translateX(0);
+  	transform: translateX(0);
 }
+
+.cast-video {
+	-o-object-fit: cover;
+	object-fit: cover;
+	width: 100vw;
+	min-height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+  	transform: translateX(0);
+}
+
 
 #movieTrailer {
 	position: relative;
@@ -256,6 +268,7 @@ footer {
 	height:100px;
 	padding:28px 20px;
 	z-index: 20;
+	color:$medgray;
 
   	.watch-trailer {
   		margin-top:-32px;
@@ -290,7 +303,7 @@ footer {
 		}
 
   	a {
-  		color:$gray;
+  		color:$lightgray;
   		margin:0px 10px;
   	}
 }

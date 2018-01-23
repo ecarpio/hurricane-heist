@@ -1,3 +1,13 @@
+$.html5Loader({
+      filesToLoad:    'js/load.json', // this could be a JSON or simply a javascript object
+      onBeforeLoad:       function () {console.log('before')},
+      onComplete:         function () {console.log('complete')},
+      onElementLoaded:    function ( obj, elm) { },
+      onUpdate:           function ( percentage ) {console.log(percentage)}
+});
+
+
+
 $(function(){
 	console.log('test')
 	
