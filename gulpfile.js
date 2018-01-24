@@ -48,7 +48,7 @@ gulp.task('compress', function() {
             './node_modules/jquery.html5loader/src/animations/jquery.html5Loader.line.js',
             './node_modules/jquery.html5loader/src/jquery.html5Loader.js',
         ])
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(concat('main.js'))
         .pipe(gulp.dest('./js/'))
         .pipe(browserSync.stream());

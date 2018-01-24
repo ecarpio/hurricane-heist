@@ -315,6 +315,20 @@ header {
 		}
 }
 
+#makeitrain-static {
+	@extend .gothic;
+	font-size:38px;
+	font-weight:900;
+	text-transform: none;
+	font-style: italic;
+	color:#fff;
+	text-shadow:-3px 3px 0px #000;
+		span {
+			color:$red;
+		}
+}
+
+
 .gallery-image {
 	-o-object-fit: cover;
 	object-fit: cover;
@@ -481,7 +495,7 @@ footer {
 						}
 
 					.trailer-logo {
-						margin-top:-30px;
+						margin-top:0px;
 						width:60%;
 						max-width:400px;
 						position:absolute;
@@ -577,10 +591,36 @@ footer {
 	position:absolute;
 	text-align:center;
 	width:100%;
-	color:white;
+	color:#fff;
 	vertical-align: middle;
 	display: block;
 	font-style: normal;
+	@extend .roboto;
 	font-size:23px;
 	z-index: 1000;
+}
+
+#preload {
+	position:fixed;
+	top:0px;
+	bottom:0px;
+	right:0px;
+	left:0px;
+	z-index: 1600;
+	background:#000;
+
+		.loader-line-container {
+			position:relative;
+			width:75%;
+			margin:auto;
+			top: 65%;
+  		transform: translateY(-0%);
+
+				.loader-line {
+					width:0%;
+					height:1px;
+					background-color:$red;
+					@extend .ease-slow;
+				}
+		}
 }

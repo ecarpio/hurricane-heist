@@ -17,9 +17,6 @@
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
   
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -30,6 +27,20 @@
   </head>
 
   <body>
+
+    <div id="preload">
+      <video playsinline id="loader-background" class="video-bg" style="opacity: 1;">
+        <source src="assets/hh-loader.mp4" type="video/mp4">
+      </video>
+      <div class="loader-line-container">
+
+        <div id="makeitrain-static">
+            #MakeIt<span>Rain</span>
+        </div>
+
+        <div class="loader-line"></div>
+      </div>
+    </div>
 
     <div id="html5Loader"></div>
     <div class="scanlines"></div>
@@ -139,14 +150,23 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <video autoplay="true" loop="true" class="cast-video" muted="" playsinline="" id="cast1" style="opacity: 1;">
-              <source src="http://hostilesmovie.com/img/bg-loop.mp4" type="video/mp4">
+              <source src="assets/maggiegrace.mp4" type="video/mp4">
             </video>
           </div>
           <div class="carousel-item">
-            test
+            <video autoplay="true" loop="true" class="cast-video" muted="" playsinline="" id="cast1" style="opacity: 1;">
+              <source src="assets/tobby.mp4" type="video/mp4">
+            </video>
           </div>
           <div class="carousel-item">
-            test 2
+            <video autoplay="true" loop="true" class="cast-video" muted="" playsinline="" id="cast1" style="opacity: 1;">
+              <source src="assets/ryan.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="carousel-item">
+            <video autoplay="true" loop="true" class="cast-video" muted="" playsinline="" id="cast1" style="opacity: 1;">
+              <source src="assets/ralph.mp4" type="video/mp4">
+            </video>
           </div>
         </div>
         <a class="carousel-control-prev" href="#castCarousel" role="button" data-slide="prev">

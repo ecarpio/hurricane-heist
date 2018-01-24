@@ -1,25 +1,53 @@
 $(function(){
 
-	var loaderAnimation = $("#html5Loader").LoaderAnimation({
-		onComplete:function(){
-			console.log("preloader animation completed!");
-		}
-	});
+	// var loaderAnimation = $("#html5Loader").LoaderAnimation({
+	// 	onComplete:function(){
+	// 		console.log("preloader animation completed!");
+	// 	}
+	// });
 
+	// $.html5Loader({
+	// 		filesToLoad:'js/files.json',
+	// 		onBeforeLoad: function(){ console.log('begin') },
+	// 		onComplete: function () {
+	// 			playTrailer();
+	// 			console.log("All the assets are loaded!");
+	// 		},
+	// 		onUpdate: loaderAnimation.update,
+	// 		onMediaError: function(){ console.log('error') },
+	// 		forceMediaPreload: 'true'
+	// });
+	
 	$.html5Loader({
-			filesToLoad:'../js/files.json',
+			filesToLoad:'js/files.json',
 			onBeforeLoad: function(){ console.log('begin') },
 			onComplete: function () {
-				playTrailer();
+				playLoader()
 				console.log("All the assets are loaded!");
 			},
-			onUpdate: loaderAnimation.update,
-			onMediaError: function(){ console.log('error') },
-			forceMediaPreload: 'true'
+			onUpdate: function(percentage ){ 
+				console.log(percentage)
+				$('.loader-line').width(percentage + '%');
+
+			},
+			onMediaError: function(obj, elm){ console.log(obj) }
+
 	});
+
+ 
+	function playLoader() {
+		$('.loader-line-container').fadeOut(200).delay(200).queue( function(hideLoader){
+			$('#loader-background').get(0).play()
+			$('#loader-background').on('ended',function(){ 
+				playTrailer()
+			});
+			hideLoader();
+		});
+	}
 
 
 	function playTrailer() {
+		$('#preload').fadeOut(400);
 		$('#movieTrailerModal').modal('show');
 	}
 	
@@ -83,9 +111,9 @@ $(function(){
 
 	// On Trailer End
 	$('#movieTrailer').on('ended',function(){
-      $('#movieTrailerModal').modal('hide');
-      startIntro()
-  	});
+    $('#movieTrailerModal').modal('hide');
+    startIntro()
+	});
 
 	// On Trailer Modal Close
 	$("#movieTrailerModal").on('hidden.bs.modal', function () {
