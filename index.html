@@ -29,7 +29,7 @@
   <body>
 
     <div id="preload">
-      <video playsinline id="loader-background" class="video-bg" style="opacity: 1;">
+      <video muted playsinline id="loader-background" class="video-bg" style="opacity: 1;">
         <source src="assets/hh-loader.mp4" type="video/mp4">
       </video>
       <div class="loader-line-container">
@@ -232,7 +232,8 @@
         <div class="modal-content">
           <img src="assets/hh-logo.png" class="trailer-logo start"/>
           <div class="modal-body">
-            <video controls="true" playsinline id="movieTrailer" style="opacity: 1;">
+            <span id="unmute"></span>
+            <video controls="true" playsinline muted autoplay id="movieTrailer" style="opacity: 1;">
               <source id="video-background-source" src="assets/hh1.mp4" type="video/mp4">
             </video>
           </div>

@@ -1,22 +1,4 @@
 $(function(){
-
-	// var loaderAnimation = $("#html5Loader").LoaderAnimation({
-	// 	onComplete:function(){
-	// 		console.log("preloader animation completed!");
-	// 	}
-	// });
-
-	// $.html5Loader({
-	// 		filesToLoad:'js/files.json',
-	// 		onBeforeLoad: function(){ console.log('begin') },
-	// 		onComplete: function () {
-	// 			playTrailer();
-	// 			console.log("All the assets are loaded!");
-	// 		},
-	// 		onUpdate: loaderAnimation.update,
-	// 		onMediaError: function(){ console.log('error') },
-	// 		forceMediaPreload: 'true'
-	// });
 	
 	$.html5Loader({
 			filesToLoad:'js/files.json',
@@ -119,6 +101,7 @@ $(function(){
 	$("#movieTrailerModal").on('hidden.bs.modal', function () {
 		$('.trailer-logo').removeClass('end').addClass('start');
 		$('#movieTrailer').get(0).load();
+		$('#movieTrailer').get(0).pause();
 	    startIntro()
 	});
 
