@@ -484,6 +484,7 @@ footer {
 				.modal-content {
 					background:none;
 					padding:0px 0px;
+					margin-top:-150px;
 						.modal-header {
 							padding-top:10px;
 							border-radius:0px;
@@ -518,7 +519,7 @@ footer {
 					}	
 
 					.modal-body {
-						padding:0px 0px;
+						padding:0px 100px;
 						background: #000;
 						border-radius: 0px;
 						height:80%;
