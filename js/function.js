@@ -53,7 +53,7 @@ $(function(){
 		// Animate website components in
 		$('.intro-animate').removeClass('start').delay(800).queue(function(next){
 		    $(this).addClass('end');
-		    $('#home-background').get(0).play();
+		    //$('#home-background').get(0).play();
 		    $('.footer-overlay').removeClass('hide')
 		    animateBlurbs();
 		    next();

@@ -131,7 +131,7 @@ header {
 	left:0px;
 	right:0px;
 	bottom:0px;
-	z-index: 1;
+	min-height: 100vh;
 }
 
 .navbar-header {
@@ -235,6 +235,7 @@ header {
 	transform: translateX(0);
 }
 
+// Cast
 .cast-video {
 	-o-object-fit: cover;
 	object-fit: cover;
@@ -244,6 +245,36 @@ header {
 	top: 0;
 	left: 0;
 	transform: translateX(0);
+}
+
+.cast-name {
+	position:absolute;
+	width:90%;
+	max-width: 600px;
+	top:500px;
+	right:100px;
+	text-align: right;
+		.real-name {
+			@extend .gothic;
+			font-size:60px;
+			line-height:35px;
+			font-weight:900;
+			text-transform: none;
+			font-style: italic;
+			color:#fff;
+			text-shadow:-3px 3px 0px #000;
+		}
+
+		.character-name {
+			@extend .gothic;
+			font-size:48px;
+			font-weight:900;
+			text-transform: none;
+			font-style: italic;
+			color:$red;
+			text-shadow:-3px 3px 0px #000;
+		}
+
 }
 
 .synopsis-video {
@@ -390,12 +421,12 @@ footer {
 	position: absolute; 
 	left: 0 ; right: 0; bottom: 0; 
 	height:100px;
-	padding:28px 20px;
+	padding:0px 20px;
 	z-index: 20;
 	color:$medgray;
 
   	.watch-trailer {
-  		margin-top:-32px;
+  		margin-top:-20px;
   		margin-left:20px;
   		position:absolute;
   		left:0px;
@@ -413,7 +444,7 @@ footer {
   	.play-icon {
   		position:absolute;
   		left:295px;
-  		bottom:-40px;
+  		bottom:-50px;
   		@extend .ease-pop;
   			&.start {
   				@extend .ease-pop;
@@ -422,13 +453,23 @@ footer {
   			}
   	}
 
+  	.ep-logo {
+  		margin-top:30px;
+
+  			img {
+  				width:100%;
+  				max-width:240px;
+  			}
+  	}
+
   	.bottom-links {
+  		margin-top:45px;
 			margin-bottom:5px;
 		}
 
   	a {
   		color:$lightgray;
-  		margin:0px 10px;
+  		margin:0px 10px 0 0;
   	}
 }
 
@@ -442,10 +483,12 @@ footer {
 
 		.carousel-control-prev {
 				justify-content:left;
+				width:0px;
 		}
 
 		.carousel-control-next {
 				justify-content:flex-end;
+				width:0px;
 		}
 
 		.arrow-container {

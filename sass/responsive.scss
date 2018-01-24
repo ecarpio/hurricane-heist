@@ -58,7 +58,40 @@
 	}
 }
 
-@media (max-width:640px), screen and (max-height: 700px) { 
+
+
+@media (max-height: 736px) {
+	.ff-blurb {
+				max-width: 300px !important;
+				top:170px !important;
+
+					&.end {
+						right:100px !important;
+					} 
+			}
+
+			.movie-blurb {
+				max-width: 250px !important;
+				top:330px !important;
+					&.end {
+						right:100px !important;
+					} 
+			}
+
+			#makeitrain {
+				font-size:32px !important;
+				top:420px !important;
+					&.end {
+						right:100px !important;
+					} 
+			}
+
+			.cast-name { 
+				top:300px !important;
+			}
+}
+
+@media (max-width:640px){ 
 
 	.modal-body {
 		padding:0px 0px !important;
@@ -102,6 +135,20 @@
 			}
 	}
 
+	.cast-name { 
+
+		right:20px !important;
+		text-align: center !important;
+		.real-name {
+			font-size:48px !important;
+			line-height:40px !important;
+		}
+
+		.character-name {
+			font-size:36px !important;
+		}
+	}
+
 	.synopsis {
 		.content {
 			width:100% !important;
@@ -122,3 +169,21 @@
 	}
 
 }
+
+@media (max-width:575px){
+	footer {
+
+		padding:0px 0px !important;
+
+		.bottom-links {
+			margin-top:10px !important;
+			font-size:9px;
+		}
+
+		.ep-logo {
+			margin-top:25px !important;
+
+				img {max-width:200px !important;}
+		}
+	}
+} 
