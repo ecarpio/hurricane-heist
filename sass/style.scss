@@ -265,6 +265,7 @@ header {
 	bottom:0px;
 	left:0px;
 	right:0px;
+	z-index: 10;
 
 		.ff-blurb {
 			position:absolute;
@@ -537,11 +538,13 @@ footer {
 	right:0px;
 	bottom:-2000px;
 	background:#000;
+	z-index:0;
 	@extend .ease-pop;
 
 		&.active {
 			top:0px;
 			bottom:0px;
+			z-index: 10;
 			@extend .ease-pop;
 		}
 
