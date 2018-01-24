@@ -58,7 +58,7 @@
 	}
 }
 
-@media (max-width:640px) { 
+@media (max-width:640px), screen and (max-height: 700px) { 
 
 	.trailer-logo { 
 		margin-top:-30px !important;
