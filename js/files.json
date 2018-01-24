@@ -1,5 +1,15 @@
 {
   "files": [{
+    "source": "../js/main.js",
+    "type": "SCRIPT",
+    "size": 143965,
+    "stopExecution": true
+  },{
+    "source": "../js/function.js",
+    "type": "SCRIPT",
+    "size": 4096,
+    "stopExecution": true
+  },{
     "source": "assets/billing-block.png",
     "type": "IMAGE",
     "size": 189728

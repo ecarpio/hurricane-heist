@@ -5,7 +5,7 @@ $(function(){
 			console.log("preloader animation completed!");
 		}
 	});
-	
+
 	$.html5Loader({
 			filesToLoad:'../js/files.json',
 			onBeforeLoad: function(){ console.log('begin') },
@@ -14,7 +14,8 @@ $(function(){
 				console.log("All the assets are loaded!");
 			},
 			onUpdate: loaderAnimation.update,
-			onMediaError: function(){ console.log('error') }
+			onMediaError: function(){ console.log('error') },
+			forceMediaPreload: 'true'
 	});
 
 
