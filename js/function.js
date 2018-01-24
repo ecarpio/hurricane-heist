@@ -1,15 +1,41 @@
-$.html5Loader({
-      filesToLoad:    'js/load.json', // this could be a JSON or simply a javascript object
-      onBeforeLoad:       function () {console.log('before')},
-      onComplete:         function () {console.log('complete')},
-      onElementLoaded:    function ( obj, elm) { },
-      onUpdate:           function ( percentage ) {console.log(percentage)}
-});
-
-
-
 $(function(){
-	console.log('test')
+
+	var loaderAnimation = $("#html5Loader").LoaderAnimation({
+		onComplete:function(){
+			console.log("preloader animation completed!");
+		}
+	});
+	
+	$.html5Loader({
+			filesToLoad:'../js/files.json',
+			onBeforeLoad: function(){ console.log('begin') },
+			onComplete: function () {
+				playTrailer();
+				console.log("All the assets are loaded!");
+			},
+			onUpdate: loaderAnimation.update,
+			onMediaError: function(){ console.log('error') }
+	});
+
+
+	function playTrailer() {
+		$('#movieTrailerModal').modal('show');
+	}
+	
+
+	// Hide Footer Credit
+	function showFooterCredit() {
+		$('.footer-overlay').removeClass('hide');
+	};
+
+	// Hide Footer Credit
+	function hideFooterCredit() {
+		$('.footer-overlay').delay(3000).queue( function(hideFooter){
+			$(this).addClass('hide')
+			hideFooter();
+		})
+	}	
+
 	
 	// Start Intro Animations
 	function startIntro() {
@@ -18,15 +44,25 @@ $(function(){
 		    $(this).addClass('end');
 		    $('#home-background').get(0).play();
 		    $('.footer-overlay').removeClass('hide')
+		    animateBlurbs();
 		    next();
 		});
-
-		// Show footer overlay and hide
-		$('.footer-overlay').delay(4000).queue(function(hideFooter){
-			$(this).addClass('hide')
-			hideFooter();
-		})
+		hideFooterCredit();	
 	}	
+
+	function animateBlurbs() {
+		$('.ff-blurb').addClass('end').delay(400).queue(function(next){
+			$('.movie-blurb').addClass('end').delay(2500).queue(function(){
+				$('#makeitrain').addClass('end')
+			});
+		})
+	}
+
+	$('#credits').on('click', function(){
+		showFooterCredit();
+		hideFooterCredit()
+	})
+
 
 	// Start Trailer Logo Animations
 	function trailerAnimate() {
@@ -35,8 +71,7 @@ $(function(){
 		    next();
 		});
 	}
-		// Spawn Movie Modal
-	$('#movieTrailerModal').modal('show');
+	
 
 	// Play Trailer on Modal Show
 	$('#movieTrailerModal').on('shown.bs.modal', function () {
@@ -75,8 +110,6 @@ $(function(){
 
 
 
-	
-
 	// Main Navigation
 	$('.main-nav a').on('click', function(){
 		closeMenu();
@@ -88,12 +121,19 @@ $(function(){
 		if( $(this).hasClass('active')) {
 			var activePage = $(this).data('nav');
 			$('.sub-page.'+ activePage).addClass('active');
-				
 		} 
 
 		if (!$('.sub-page').hasClass('active')) {
 			$('#home-background').get(0).play();
 		}
+
+		if (!$('.synopsis').hasClass('active')) {
+			$('#synopsis-background').get(0).load();
+		} else {
+			$('#synopsis-background').get(0).play();
+		}
+
+
 	})
 
 

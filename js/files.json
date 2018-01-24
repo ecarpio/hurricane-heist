@@ -1,0 +1,24 @@
+{
+  "files": [{
+    "source": "assets/billing-block.png",
+    "type": "IMAGE",
+    "size": 189728
+  }, {
+    "type": "VIDEO",
+    "sources": {
+      "h264": {
+        "source": "assets/hh1.mp4",
+        "size": 50000000
+      }
+    }
+  }, {
+    "type": "VIDEO",
+    "sources": {
+      "h264": {
+        "source": "assets/hh-main-bg.mp4",
+        "size": 14753688
+      }
+    }
+  }]
+
+}

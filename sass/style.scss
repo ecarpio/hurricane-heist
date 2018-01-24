@@ -31,6 +31,18 @@
         transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000); /* easeOutQuint */
 }
 
+.ease-slow {
+	-webkit-transition: all 800ms cubic-bezier(0.000, 0.320, 0.000, 0.990); 
+   -moz-transition: all 800ms cubic-bezier(0.000, 0.320, 0.000, 0.990); 
+     -o-transition: all 800ms cubic-bezier(0.000, 0.320, 0.000, 0.990); 
+        transition: all 800ms cubic-bezier(0.000, 0.320, 0.000, 0.990); /* custom */
+
+-webkit-transition-timing-function: cubic-bezier(0.000, 0.320, 0.000, 0.990); 
+   -moz-transition-timing-function: cubic-bezier(0.000, 0.320, 0.000, 0.990); 
+     -o-transition-timing-function: cubic-bezier(0.000, 0.320, 0.000, 0.990); 
+        transition-timing-function: cubic-bezier(0.000, 0.320, 0.000, 0.990); /* custom */
+}
+
 // Typography
 
 .gothic {
@@ -74,6 +86,7 @@ body {
 	top:-300px;
 	width:100%;
 	height:500px;
+	z-index: 4;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+31,000000+44&1+23,0+69 */
 	background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0.85) 23%, rgba(0,0,0,0.83) 31%, rgba(0,0,0,0.55) 44%, rgba(0,0,0,0) 69%); /* FF3.6-15 */
 	background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0.85) 23%,rgba(0,0,0,0.83) 31%,rgba(0,0,0,0.55) 44%,rgba(0,0,0,0) 69%); /* Chrome10-25,Safari5.1-6 */
@@ -102,7 +115,7 @@ header {
 	padding:12px 0px 10px 0px;
 	z-index: 20;
 		.social {
-			padding-right:50px;
+			padding-right:15px;
 			.fa {
 				margin-left:15px;
 				color:$red;
@@ -111,13 +124,23 @@ header {
 		}
 }
 
+.scanlines {
+	background-image:url(../assets/scanlines.png);
+	position:fixed;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	z-index: 1;
+}
+
 .navbar-header {
 	overflow:hidden;
 	z-index: 20;
 }
 
 .main-logo {
-	margin-top:-30px;
+	margin-top:-50px;
 	width:98%;
 	max-width:520px;
 	position:absolute;
@@ -140,9 +163,6 @@ header {
 }
 
 
-
-
-
 // Main NAvigation
 .navbar-toggler {
 	z-index: 50;
@@ -163,7 +183,6 @@ header {
 		right:-1000px;
 		@extend .ease-pop;
 	}
-
 
 	li {
 
@@ -213,7 +232,7 @@ header {
 	position: fixed;
 	top: 0;
 	left: 0;
-  	transform: translateX(0);
+	transform: translateX(0);
 }
 
 .cast-video {
@@ -224,9 +243,88 @@ header {
 	position: fixed;
 	top: 0;
 	left: 0;
-  	transform: translateX(0);
+	transform: translateX(0);
 }
 
+.synopsis-video {
+	-o-object-fit: cover;
+	object-fit: cover;
+	width: 100vw;
+	min-height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateX(0);
+}
+
+
+
+.home-container {
+	position:fixed;
+	top:0px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+
+		.ff-blurb {
+			position:absolute;
+			width:90%;
+			max-width: 400px;
+			top:200px;
+			right:-4000px;
+			@extend .ease-slow;
+				&.end {
+					right:100px;
+					@extend .ease-slow;
+				}
+		}
+
+		.movie-blurb {
+			position:absolute;
+			width:80%;
+			max-width: 350px;
+			top:420px;
+			right:-4000px;
+			@extend .ease-slow;
+				&.end {
+					right:100px;
+					@extend .ease-slow;
+				}
+		}
+
+		#makeitrain {
+			@extend .gothic;
+			font-size:38px;
+			font-weight:900;
+			text-transform: none;
+			font-style: italic;
+			color:#fff;
+			text-shadow:-3px 3px 0px #000;
+			position:absolute;
+			right:-4000px;
+			top:540px;
+			
+				span {
+					color:$red;
+				}
+
+				&.end {
+					right:100px;
+					@extend .ease-slow;
+				}
+		}
+}
+
+.gallery-image {
+	-o-object-fit: cover;
+	object-fit: cover;
+	width: 100vw;
+	min-height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+  	transform: translateX(0);
+}
 
 #movieTrailer {
 	position: relative;
@@ -234,6 +332,7 @@ header {
 	object-fit: cover;
 	width: 100%;
 }
+
 
 // Footer
 .footer-overlay {
@@ -256,12 +355,21 @@ header {
 			width:100%;
 			max-width:900px;
 		}
+
+		.close {
+			.fa {
+				color:#fff;
+				box-shadow: none;
+				padding:10px;
+				font-size:14px;
+			}
+		}
 }
 
 footer { 
 	text-transform: uppercase;
 	font-size:11px;
-	background-color:#000;
+	background-color:rgba(0,0,0,0.85);
 	border-top:1px solid #333;
 	position: absolute; 
 	left: 0 ; right: 0; bottom: 0; 
@@ -315,6 +423,21 @@ footer {
 		.carousel-inner {
 			height:100%;
 		}
+
+		.carousel-control-prev {
+				justify-content:left;
+		}
+
+		.carousel-control-next {
+				justify-content:flex-end;
+		}
+
+		.arrow-container {
+			background:$red;
+			padding: 15px 30px;
+    	font-size: 25px;
+		}
+		
 }
 
 // Modal
@@ -392,6 +515,7 @@ footer {
 //Sub Pages
 
 .sub-page {
+	z-index: 2;
 	position:fixed;
 	top:2000px;
 	left:0px;
@@ -405,5 +529,57 @@ footer {
 			bottom:0px;
 			@extend .ease-pop;
 		}
+
+		&.synopsis {
+			.content {
+				width:100%;
+				max-width:500px;
+				margin-top:220px;
+				position:absolute;
+				right:100px;
+				color:#fff;
+				z-index: 10;
+
+					.page-title {
+						@extend .gothic;
+						font-size:38px;
+						font-weight:900;
+						text-transform: none;
+						font-style: italic;
+						color:#fff;
+						text-shadow:-3px 3px 0px #000;
+					}
+
+					p {
+						font-size:18px;
+					}
+			}
+		}
 }
 
+
+
+
+#html5Loader{
+	top:0;
+	left:0;
+	background-color:#000;
+	background-color:rgba(0,0,0,1);
+	margin:0;
+	position:fixed;
+	z-index: 1000;
+	@extend .roboto;
+}
+
+#html5Loader .fallback {
+	top:50%;
+	position:absolute;
+	text-align:center;
+	width:100%;
+	color:white;
+	vertical-align: middle;
+	display: block;
+	font-style: normal;
+	font-size:23px;
+	z-index: 1000;
+}

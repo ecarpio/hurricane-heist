@@ -63,4 +63,52 @@
 		width:90% !important;
 		margin-top:-20px !important;
 	}
+
+	.home-container {
+
+			.ff-blurb {
+				max-width: 300px !important;
+				top:170px !important;
+
+					&.end {
+						right:10px !important;
+					} 
+			}
+
+			.movie-blurb {
+				max-width: 250px !important;
+				top:330px !important;
+					&.end {
+						right:10px !important;
+					} 
+			}
+
+			#makeitrain {
+				font-size:32px !important;
+				top:420px !important;
+					&.end {
+						right:10px !important;
+					} 
+			}
+	}
+
+	.synopsis {
+		.content {
+			width:100% !important;
+			max-width:100% !important;
+			margin-top:170px !important;
+			left:0px;
+			right:0px;
+			padding:0px 30px;
+
+				.page-title {
+					font-size:32px !important;
+				}
+
+				p {
+					font-size:16px !important;
+				}
+		}
+	}
+
 }
