@@ -235,6 +235,17 @@ header {
 	transform: translateX(0);
 }
 
+.loader-bg {
+	-o-object-fit: cover;
+	object-fit: cover;
+	width: 100%;
+	height:auto;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+}
+
 // Cast
 .cast-video {
 	-o-object-fit: cover;
@@ -263,6 +274,15 @@ header {
 			font-style: italic;
 			color:#fff;
 			text-shadow:-3px 3px 0px #000;
+
+				a {
+					color:#fff;
+					@extend .ease-quick;
+						&:hover {
+							color:$red;
+							@extend .ease-quick;
+						}
+				}
 		}
 
 		.character-name {
@@ -297,6 +317,13 @@ header {
 	left:0px;
 	right:0px;
 	z-index: 10;
+	@extend .ease-slow;
+		&.blur {
+			opacity:0.10;
+			z-index: 0;
+			@extend .ease-slow;
+		}
+
 
 		.ff-blurb {
 			position:absolute;
@@ -583,13 +610,13 @@ footer {
 	bottom:-2000px;
 	background:#000;
 	z-index:0;
-	@extend .ease-pop;
+	@extend .ease-slow;
 
 		&.active {
 			top:0px;
 			bottom:0px;
 			z-index: 10;
-			@extend .ease-pop;
+			@extend .ease-slow;
 		}
 
 		&.synopsis {

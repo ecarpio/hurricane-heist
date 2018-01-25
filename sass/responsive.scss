@@ -53,7 +53,7 @@
 
 	.play-icon {
 		max-width:40px;
-		bottom:-20px !important;
+		bottom:-33px !important;
 		left:220px !important;
 	}
 }
@@ -90,6 +90,8 @@
 				top:300px !important;
 			}
 }
+
+
 
 @media (max-width:640px){ 
 
@@ -186,4 +188,61 @@
 				img {max-width:200px !important;}
 		}
 	}
+
+	.synopsis {
+		.content {
+			p {
+				max-height: 250px;
+				overflow-y:scroll;
+			}
+		}
+	}
 } 
+
+@media (max-height: 640px) {
+
+	.home-container {
+
+		.ff-blurb {
+			max-width: 230px !important;
+			top:150px !important;
+
+				&.end {
+					right:20px !important;
+				} 
+		}
+
+		.movie-blurb {
+			max-width: 230px !important;
+			top:260px !important;
+				&.end {
+					right:20px !important;
+				} 
+		}
+
+		#makeitrain {
+			font-size:32px !important;
+			top:340px !important;
+				&.end {
+					right:20px !important;
+				} 
+		}
+
+		
+	}
+
+	.cast-name { 
+		top:200px !important;
+	}
+
+	.synopsis {
+		.content {
+			margin-top:150px !important;
+
+			p {
+				max-height: 190px !important;
+				overflow-y:scroll;
+			}
+		}
+	}
+}

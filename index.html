@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <title>Hurricane Heist</title>
 
     <!-- Google Font Load -->
@@ -29,7 +30,12 @@
   <body>
 
     <div id="preload">
-      <video muted playsinline id="loader-background" class="video-bg" style="opacity: 1;">
+
+      <audio id="intro-sfx" >
+        <source src="assets/intro-sfx.mp3" type="audio/mpeg">
+      </audio>
+
+      <video muted playsinline id="loader-background" class="loader-bg" style="opacity: 1;">
         <source src="assets/hh-loader.mp4" type="video/mp4">
       </video>
       <div class="loader-line-container">
@@ -48,9 +54,11 @@
     
     <!-- End Main Home Background Video -->
     <div class="home-container">
-      <!-- <video loop muted playsinline id="home-background" class="video-bg" style="opacity: 1;">
+      <!-- Uncomment 140 131 and 56 in function.js
+      <video loop muted playsinline id="home-background" class="video-bg" style="opacity: 1;">
         <source src="assets/hh-main-bg.mp4" type="video/mp4">
-      </video> -->
+      </video> 
+      -->
       <img src="assets/keyart.jpg" id="home-background" class="video-bg" />
       <div class="scanlines"></div>
       
@@ -121,7 +129,7 @@
             <a href="#" id="credits">Legal</a> &copy; 2018 Entertainment Studios. All Rights Reserved
           </div>
           <div class="col-12 col-sm-4 ep-logo text-center text-sm-right order-sm-last order-first">
-            <img src="assets/entertainmentstudios_logo.png" />
+            <a href="http://esmotionpictures.com" target="_blank"><img src="assets/entertainmentstudios_logo.png" /></a>
           </div>
         </div>
       </div>
@@ -156,7 +164,7 @@
             </video>
             <div class="scanlines"></div>
             <div class="cast-name">
-              <div class="real-name">MAGGIE GRACE</div>
+              <div class="real-name"><a href="http://www.imdb.com/name/nm1192254/?ref_=tt_ov_st_sm" target="_blank">MAGGIE GRACE</a></div>
               <div class="character-name">CASEY</div>
             </div>
 
@@ -167,7 +175,7 @@
             </video>
             <div class="scanlines"></div>
             <div class="cast-name">
-              <div class="real-name">TOBY KEBBELL</div>
+              <div class="real-name"><a href="http://www.imdb.com/name/nm1527905/?ref_=tt_ov_st_sm" target="_blank">TOBY KEBBELL</a></div>
               <div class="character-name">WILL</div>
             </div>
           </div>
@@ -177,7 +185,7 @@
             </video>
             <div class="scanlines"></div>
             <div class="cast-name">
-              <div class="real-name">RYAN KWANTEN</div>
+              <div class="real-name"><a href="http://www.imdb.com/name/nm0477127/?ref_=tt_ov_st_sm" target="_blank">RYAN KWANTEN</a></div>
               <div class="character-name">BREEZE</div>
             </div>
           </div>
@@ -187,7 +195,7 @@
             </video>
             <div class="scanlines"></div>
             <div class="cast-name">
-              <div class="real-name">RALPH INESON</div>
+              <div class="real-name"><a href="http://www.imdb.com/name/nm0408591/?ref_=ttfc_fc_cl_t4" target="_blank">RALPH INESON</a></div>
               <div class="character-name">PERKINS</div>
             </div>
           </div>

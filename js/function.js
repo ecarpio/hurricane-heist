@@ -20,6 +20,9 @@ $(function(){
 	function playLoader() {
 		$('.loader-line-container').fadeOut(200).delay(200).queue( function(hideLoader){
 			$('#loader-background').get(0).play()
+			$('#intro-sfx').delay(600).queue( function(){
+				$(this).get(0).play()
+			});
 			$('#loader-background').on('ended',function(){ 
 				playTrailer()
 			});
@@ -128,7 +131,8 @@ $(function(){
 		$('.main-nav a').removeClass('active');
 		$('.sub-page').removeClass('active');
 		$(this).addClass('active');
-		$('#home-background').get(0).load();
+		//$('#home-background').get(0).load();
+		$('.home-container').addClass('blur');
 	
 		if( $(this).hasClass('active')) {
 			var activePage = $(this).data('nav');
@@ -136,7 +140,8 @@ $(function(){
 		} 
 
 		if (!$('.sub-page').hasClass('active')) {
-			$('#home-background').get(0).play();
+			//$('#home-background').get(0).play();
+			$('.home-container').removeClass('blur');
 		}
 
 		if (!$('.synopsis').hasClass('active')) {
