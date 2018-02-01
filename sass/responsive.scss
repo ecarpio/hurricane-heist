@@ -7,6 +7,11 @@
 		max-width:400px !important;
 	}
 
+	.in-theaters {
+		font-size:18px !important;
+		top:-20px !important;
+	}
+
 }
 
 
@@ -15,13 +20,13 @@
 		.main-nav {
 			opacity:0;
 			width:100%;
-			padding:140px 0px;
+			padding:180px 0px;
 			top:-8px;
 			position:fixed;
 			right:0px;
 			bottom:0px;
 			height:100%;
-			background:rgba(0,0,0,0.8);
+			background:rgba(0,0,0,0.9);
 
 			li {
 				width:100%;
@@ -43,6 +48,7 @@
 	&.show {
 		.main-nav {
 			opacity:1;
+			z-index: 21;
 		}
 	}
 
@@ -87,7 +93,7 @@
 			}
 
 			.cast-name { 
-				top:300px !important;
+				//top:400px !important;
 			}
 }
 
@@ -107,7 +113,13 @@
 	.main-logo {
 		width:90% !important;
 		margin-top:-20px !important;
+		font-size:18px;
 	}
+
+	.in-theaters {
+		font-size:16px !important;
+	}
+
 
 	.home-container {
 
@@ -138,7 +150,7 @@
 	}
 
 	.cast-name { 
-
+		bottom:160px !important;
 		right:20px !important;
 		text-align: center !important;
 		.real-name {
@@ -204,8 +216,8 @@
 	.home-container {
 
 		.ff-blurb {
-			max-width: 230px !important;
-			top:150px !important;
+			max-width: 210px !important;
+			top:160px !important;
 
 				&.end {
 					right:20px !important;
@@ -213,16 +225,16 @@
 		}
 
 		.movie-blurb {
-			max-width: 230px !important;
-			top:260px !important;
+			max-width: 210px !important;
+			top:270px !important;
 				&.end {
 					right:20px !important;
 				} 
 		}
 
 		#makeitrain {
-			font-size:32px !important;
-			top:340px !important;
+			font-size:28px !important;
+			top:330px !important;
 				&.end {
 					right:20px !important;
 				} 
@@ -232,7 +244,7 @@
 	}
 
 	.cast-name { 
-		top:200px !important;
+		//top:330px !important;
 	}
 
 	.synopsis {
