@@ -95,6 +95,7 @@
 			.cast-name { 
 				//top:400px !important;
 			}
+
 }
 
 
@@ -118,6 +119,24 @@
 
 	.in-theaters {
 		font-size:16px !important;
+	}
+
+	.in-theaters-foot {
+		top:-55px !important;
+		text-align: left;
+		font-size:32px !important;
+			.smaller {
+				font-size:18px !important;
+				line-height: 20px;
+				margin-bottom:-10px;
+			}
+
+			.fa {
+				font-size:24px !important;
+				margin-left:10px;
+				top:-4px;
+				position:relative;
+			}
 	}
 
 
